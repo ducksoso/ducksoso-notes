@@ -1,12 +1,4 @@
-
-
-
-
-
-
-
-
-
+# SSH 基础
 
 以下 `ssh-keygen` 命令默认在 `~/.ssh` 目录中生成 4096 位 SSH RSA 公钥和私钥文件。 如果当前位置存在 SSH 密钥对，这些文件将被覆盖。
 
@@ -36,7 +28,7 @@
 
 4. 重启ssh服务
 
-​	service sshd restart or systemctl restart sshd
+​	`service sshd restart or systemctl restart sshd`
 
 
 
