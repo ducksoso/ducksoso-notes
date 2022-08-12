@@ -26,6 +26,20 @@ hostPort:containerPort：映射本机的指定端口到虚拟机的指定端口�
 
 
 
+如果某个镜像的Dockerfile有默认的CMD，这个时候可以覆盖:
+
+使用 `--entrypoint /bin/bash`可以覆盖镜像默认的 `entrypoint`
+
+```shell
+docker run -it --entrypoint /bin/bash docker-reg.basebit.me:5000/enigma2-apps/cromwell-dind:6.3_20.10
+```
+
+
+
+
+
+
+
 
 
 
