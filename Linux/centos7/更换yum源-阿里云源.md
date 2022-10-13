@@ -76,5 +76,7 @@
 
 
 
+### Vim 语法批量替换：
 
+`  %s#http://mirrors.cloud.aliyuncs.com/centos/#http://mirrors.aliyun.com/centos#g`
 

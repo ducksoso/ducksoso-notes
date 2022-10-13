@@ -1,11 +1,13 @@
-## zsh & oh-my-zsh
+[TOC]
 
-### 安装zsh & 设置默认zsh
+# zsh & oh-my-zsh
 
-```
 
+
+## 安装zsh & 设置默认zsh
+
+```sh
 cat /etc/shells # 查看系统有几种shell 
-
 echo $SHELL # 当前系统默认的shell
 
 // Linux
@@ -13,17 +15,13 @@ sudo yum install zsh (Fedora RedHat)
 sudo apt install zsh (Debian系列，Ubuntu)
 
 // Mac 自带了zsh
-
 chsh -s /bin/zsh or 
 chsh -s $(which zsh) # 切换zsh
-
 ```
 
+## 安装oh-my-zsh
 
-
-### 安装oh-my-zsh
-
-```
+```sh
 #方法一：wget方式自动化安装oh my zsh：
 $ wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
 
@@ -76,24 +74,28 @@ $ sh -c "$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/
 
    Add `git-open` to your plugin list - edit `~/.zshrc` and change `plugins=(...)` to `plugins=(... git-open)`
 
-
-
-#### bat 代替cat
+## bat 代替cat
 
 cat 某个文件，可以在终端直接输出文件内容，bat 相比 cat 增加了行号和颜色高亮
 
-````
+````sh
 brew install bat
-
 sudo apt install bat
-
 # centos
 wget -c http://repo.openfusion.net/centos7-x86_64/bat-0.7.0-1.of.el7.x86_64.rpm
 yum install -y bat-0.7.0-1.of.el7.x86_64.rpm
 echo "alias cat='bat -n' " >> ~/.bashrc
-
-
 ````
+
+
+
+## 设置git
+
+```sh
+git config --global url."https://github.com".insteadOf git://github.com
+
+
+```
 
 
 

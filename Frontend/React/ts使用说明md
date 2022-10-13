@@ -1,0 +1,29 @@
+
+
+
+
+## 函数和函数表达式
+
+
+
+```tsx
+
+function getName1() { // function 能变量提升
+	return 'zhang1';
+}
+
+
+function getName2() { // 函数表达式定义函数，不能变量提升
+	return 'zhang2';
+}
+
+console.log(getName1())
+console.log(getName2())
+```
+
+
+
+
+
+
+
