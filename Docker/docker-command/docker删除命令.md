@@ -20,3 +20,10 @@ sudo docker rm `docker ps -a|grep Exited|awk '{print $1}'`
 
 `sudo docker container prune`
 
+
+## 批量删除 images 
+
+docker rmi -f $(docker images | grep 'docker-reg.basebit.me:5000/k8s/service/*' | awk '{print $3}' )
+
+
+

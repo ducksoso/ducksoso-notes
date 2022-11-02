@@ -71,6 +71,8 @@ Use "kubectl options" for a list of global command-line options (applies to all 
 ```
 
 
+### k8s 上有哪些资源 resource
+
 
 ### Node 
 
@@ -90,7 +92,7 @@ xdp-dev4     Ready    <none>   26d   v1.19.2
 **查看node详细信息**
 
 ```
- kubectl describe node xdp-dev1
+kubectl describe node xdp-dev1
 
 Name:               xdp-dev1
 Roles:              master
@@ -118,13 +120,6 @@ CreationTimestamp:  Thu, 25 Mar 2021 12:06:57 +0800
 ```
 
 
-
-
-
-
-
-
-
 ### Config
 
 查看当前 cluster config 配置
@@ -143,24 +138,26 @@ CreationTimestamp:  Thu, 25 Mar 2021 12:06:57 +0800
 
 ### 查看k8s configMap 信息
 
-------
-
-命令
-
 ```
 kubectl get configmaps enigma2-pipeline-api -o yaml
 
+kubectl get cm // 获取本namespace下所有pod configMap
+
+kubectl edit cm hkha-project-api // 编辑pod configMap
+
+
 ```
 
+ConfigMap和Secret是Kubernetes系统上两种特殊类型的存储卷，ConfigMap对象用于为容器中的应用提供配置数据以定制程序的行为，
+不过敏感的配置信息，例如密钥、证书等通常由Secret对象来进行配置。它们将相应的配置信息保存于对象中，
+而后在Pod资源上以存储卷的形式将其挂载并获取相关的配置，以实现配置与镜像文件的解耦
 
-
+https://www.cnblogs.com/Andya/p/12490000.html
 
 
 ### 修改crontab配置信息
 
 ------
-
-
 
 ```
 kubectl patch cronjob enigma2-report-crontabd-upload-report-to-s3 -p '{"spec": {"schedule": "48 8 * * *"}}'
