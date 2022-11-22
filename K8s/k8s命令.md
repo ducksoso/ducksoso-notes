@@ -71,10 +71,8 @@ Use "kubectl options" for a list of global command-line options (applies to all 
 ```
 
 
-### k8s 上有哪些资源 resource
-
-
-### Node 
+## k8s 上有哪些资源 resource
+### 1. Node 
 
 **获取集群中的node**
 
@@ -120,7 +118,7 @@ CreationTimestamp:  Thu, 25 Mar 2021 12:06:57 +0800
 ```
 
 
-### Config
+### 2. Config
 
 查看当前 cluster config 配置
 

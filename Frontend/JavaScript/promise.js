@@ -1,4 +1,8 @@
 
+Promise().resolve(() => {
+
+    return Promise().resolve();
+}).then()
 
 async function helloAsync() {
     const result = await new Promise((resolve) =>
