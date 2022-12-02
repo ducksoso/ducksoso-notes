@@ -85,9 +85,9 @@ val['keyword_' + index] = '%' + keyword + '%';
             );
         });
     }
-   
+      
     const tokenPayload = await this.getTokenPayload(req, token);
-   
+      
     ```
 
 小结：
@@ -99,5 +99,40 @@ reject 跟 resolve 类似
 另外说到 async await ，其实是 promise & .then 表达式的简写
 
 `const data = await Promise()` 的返回结果 与 resolve() 接收参数一样
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## ts 遍历
+
+
+
+.map
+
+
+
+.filter
+
+
+
+Foreach 
+
+
+
+
+
 
 
