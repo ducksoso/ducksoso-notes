@@ -36,3 +36,15 @@ docker login --username foo --password-stdin < ~/my_password
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
