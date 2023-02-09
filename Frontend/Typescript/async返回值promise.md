@@ -2,8 +2,6 @@
 
 如何定义 Promise 的返回值类型：
 
-
-
 ```tsx
 
 const ma = new Promise((resolve, reject) => {
@@ -58,4 +56,17 @@ const ma = new Promise((reslover: (value: number) => void, reject) => {
 
 
 
-`Promise`的类型定义如上，我们可以看到 Promise 返回值的类型定义，可以由两部分决定。第一个是构造时的泛型值，第二个是 `reslove`函数 `value`值得类型。
+`Promise`的类型定义如上，我们可以看到 Promise 返回值的类型定义，可以由两部分决定。第一个是构造时的泛
+
+型值，第二个是 `reslove`函数 `value`值得类型。
+
+
+
+
+
+
+
+
+
+
+

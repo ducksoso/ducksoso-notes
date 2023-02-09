@@ -1,11 +1,8 @@
 # 使用 devpi 搭建 PyPI Server
 
 
-
 > 使用pip命令安装Python包时，默认是去 https://pypi.python.org/simple/ 源查找相应的包，下载并安装。
->
 > 但是内网环境，或者需要发布一些私有包提供给指定用户时，就需要搭建自己的 PyPI Server
-
 
 
 ## PyPI Server 比较
@@ -21,7 +18,6 @@
 | mypypi           | 不支持        | 不支持   | ★★       | 无       | 不支持             |
 | proxypypi        | 支持          | 支持     | 无       | 无       | 不支持             |
 | Flask-Pypi-Proxy | 支持          | 支持     | 无       | 无       | 不支持             |
-
 
 
 ## devpi 特有的功能
@@ -51,24 +47,6 @@ devpi 包含三个组件：
 - devpi-server，是 devpi server 核心组件，提供镜像与缓存功能
 - devpi-web，提供 Web 界面与查询功能
 - devpi-client，命令行工具, 提供包上传等与服务器交互的功能
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -131,71 +109,6 @@ trusted-host = <host_ip>
 [search]
 index = http://<host_ip>:3141/root/public/
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```yaml
-
-apiVersion: apps/v1
-kind: StatefulSet
-metadata:
-  name: devpi
-spec:
-  serviceName: "devpi"
-  replicas: 2
-  template:
-    metadata:
-      labels:
-        app: devpi
-    spec:
-      containers:
-      - name: devpi
-        image: muccg/devpi:latest
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 3141
-          name: pip
-          protocol: TCP
-        volumeMounts:
-        - name: data
-          mountPath: /wheelhouse
-  volumeClaimTemplates:
-  - metadata:
-      name: data
-    kind: PersistentVolumeClaim
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 2Gi
-      storageClassName: local-path
-      volumeMode: Filesystem
-
-
-
-
-
-```
-
-
-
-
-
-
-
-
 
 
 
@@ -280,12 +193,9 @@ spec:
 
 
 
+## 三、部署
 
-
-```
-
-```
-
+使用 k8s 的持久化存储方式：`StatefulSet` 形式，需要写对应的yaml文件
 
 
 
@@ -297,36 +207,11 @@ spec:
 
 
 
+参考：
 
+https://learnku.com/articles/26872
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+https://blog.csdn.net/Stephen_Curry11/article/details/107566830
 
 
 

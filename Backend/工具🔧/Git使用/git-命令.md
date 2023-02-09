@@ -1,8 +1,15 @@
-## git-命令
+## git command
 
 
 
+```shell
+git reset --mixed  // 文件退出暂存区，但是修改保留
 
+git reset HEAD .  // 撤销所有的已经 add 的文件
+
+git reset HEAD  -filename // 撤销某个文件或文件夹
+
+```
 
 
 
