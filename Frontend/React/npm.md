@@ -1,5 +1,5 @@
 
-## node 中自带npm
+# node 中自带 npm & npx
 
 
 ## npm install 问题
@@ -42,5 +42,18 @@ npm install x -save-dev 在 DevDependencies 属性（开发环境）添加依赖
 
 
 
+
+## npx命令
+
+npm 从5.2版开始，增加了 npx 命令。
+
+npx 想要解决的主要问题，就是调用项目内部安装的模块。
+
+
+
+
+refers:
+
+https://www.ruanyifeng.com/blog/2019/02/npx.html
 
 
