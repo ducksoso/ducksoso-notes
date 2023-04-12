@@ -268,7 +268,7 @@ $ nest new project-name
 
 4. **Guard 守卫**：守卫是一个使用 `@Injectable()` 装饰器的类。 守卫应该实现 `CanActivate` 接口。
 
-   控制接口权限；**守卫在每个中间件之后执行，但在任何拦截器或管道之前执行**。
+   控制接口权限；**守卫在所有中间件之后执行，但在任何拦截器或管道之前执行**。
 
    ```typescript
    @UseGuards(
@@ -321,7 +321,6 @@ $ nest new project-name
 ## Reflect metadata
 
 https://blog.csdn.net/weixin_66786078/article/details/122797398
-
 
 ## 装饰器
 
