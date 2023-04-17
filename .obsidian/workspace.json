@@ -1,0 +1,171 @@
+{
+  "main": {
+    "id": "9f3f5341ea37d023",
+    "type": "split",
+    "children": [
+      {
+        "id": "d55ca78575adef18",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c52b3fa43ea1cc78",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Go/README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "39740fdad536f9ec",
+    "type": "split",
+    "children": [
+      {
+        "id": "bf4d863e558d155d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "829daacb14e508a6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b54380e9a1c5e20a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "markdown",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "647f3bbaffb6fe7e",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 255.5
+  },
+  "right": {
+    "id": "6f907f559bf176e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "4fe9c12f8f22530d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e29ccae08fc2041b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Go/README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fa6c98ceadf305f4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Go/README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0da1057aa27da71a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "910c2d502e247ab7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Go/README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "c52b3fa43ea1cc78",
+  "lastOpenFiles": [
+    "README.md",
+    "Go/README.md",
+    "Go规范.md",
+    "Go/Go规范/一些rule.md",
+    "Go/Go规范/rule.md",
+    "Backend/Redis/README.md",
+    "markdown语法.md",
+    "Go/go-bindata.md",
+    "Backend/Redis/Codis.md",
+    "Frontend/npm使用.md",
+    "Backend.md",
+    "Basebit/每日todo/2023-04-14.md",
+    "2023-04-14.md",
+    "未命名 2.canvas",
+    "未命名 1.canvas",
+    "未命名.canvas",
+    "Basebit/更改 pip & r 源的配置文件.md",
+    "Basebit/Http-code.md",
+    "Basebit/fuwu-runner迁移xeem.md"
+  ]
+}

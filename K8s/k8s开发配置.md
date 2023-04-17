@@ -129,10 +129,6 @@ pod-lens是一个可以展示pod相关资源信息的kubectl插件
 
 kbx（切换集群）- kbx=/usr/local/bin/kubectx
 
-
-
-
-
 kbs（切换namespace）- kbs=/usr/local/bin/kubens
 
 

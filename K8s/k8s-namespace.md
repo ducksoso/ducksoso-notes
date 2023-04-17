@@ -2,7 +2,9 @@
 
 1、Namespace 概述
 
-Namespace是对一组资源和对象的抽象集合，比如可以用来将系统内部的对象划分为不同的项目组或用户组。常见的`pods, services, replication controllers`和`deployments`等都是属于某一个`namespace`的（默认是default），而`node, persistentVolumes`等则不属于任何`namespace`。
+Namespace是对一组资源和对象的抽象集合，比如可以用来将系统内部的对象划分为不同的项目组或用户组。常见的`pods, services, replication controllers`和`deployments`等都是属于某一个`namespace`的（默认是default），而`node, persistentVolumes`等则不属于任何`namespace`。 
+
+
 
 Namespace常用来隔离不同的用户，比如`Kubernetes`自带的服务一般运行在`kube-system namespace`中。
 

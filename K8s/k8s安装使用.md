@@ -49,10 +49,6 @@ kubectl --kubeconfig ~/Downloads/local_bee get pods | grep enigma2-operation
 
 
 
-
-
-
-
 https://kubernetes.io/zh/docs/tasks/tools/install-kubectl/
 
 ### 使用 Telepresence 在本地调试 Kubernetes 微服务

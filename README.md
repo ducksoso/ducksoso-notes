@@ -1,5 +1,7 @@
 # Ducksoso-notes
 
+------
+
 ## [Backend](Backend)
 
 ## [Docker](Docker)
@@ -19,23 +21,39 @@
 ## [windows](windows)
 
 
-目标：go、Java、js、ts、python、shell、c++
+#### 目标：
 
-makefile
+Go、Java、Python、Js(ts)、Shell、Linux
 
+#### 组件：
 
+Linux、Redis、Mysql、Makefile
 
+网站、公众号
 
-
-网站
-
-
-
-公众号
+[领域驱动架构（DDD）](https://www.zhihu.com/question/25089273)
 
 
 
-外卖
+
+
+**AIGC（AI generated content）**
+
+
+
+socket 技术
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

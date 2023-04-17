@@ -1,9 +1,5 @@
 
 
-
-
-
-
 修改 python site.py 文件 & r Linux 的 .Rprofile 配置文件，添加相应的 path
 
 
