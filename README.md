@@ -41,7 +41,7 @@ Linux、Redis、Mysql、Makefile
 
 
 
-socket 技术
+websocket 技术
 
 
 
