@@ -35,7 +35,7 @@ Shell 数组用括号来表示，元素用"空格"符号分割开，初始化时
 
 
 
-### 运算符
+## 3. 运算符
 
 
 
@@ -116,7 +116,16 @@ command 0< filename 1> filename2   把标准输入重定向到filename文件中�
 
 
 
-### 函数
+
+
+
+
+
+
+
+
+
+## 函数
 
 定义：
 
@@ -167,7 +176,7 @@ command 0< filename 1> filename2   把标准输入重定向到filename文件中�
 
 
 
-### 流程判断
+## 流程判断
 
 **[ ... ] vs (( ... )) 区别**
 
@@ -181,6 +190,10 @@ command 0< filename 1> filename2   把标准输入重定向到filename文件中�
 
 
 
+
+
+
+https://blog.csdn.net/K346K346/article/details/51819236
 
 
 
