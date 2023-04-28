@@ -16,3 +16,27 @@
 
 5. 替换：
 
+
+
+
+
+#### vscode 扩展选择功能
+
+**收缩选择 & 扩展选择**
+
+
+
+Mac 下快捷键：`shift + ctrl + left` 和 `shift + ctrl + right`
+
+Windows 下快捷键：`shift+alt+left` 和 `shift+alt+right`
+
+
+
+
+
+https://learnku.com/articles/51533
+
+https://code.visualstudio.com/docs/editor/codebasics#_shrinkexpand-selection
+
+
+
