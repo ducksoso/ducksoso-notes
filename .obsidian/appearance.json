@@ -1,9 +1,10 @@
 {
   "accentColor": "#6376c5",
-  "theme": "moonstone",
-  "cssTheme": "Minimal",
+  "theme": "system",
+  "cssTheme": "",
   "interfaceFontFamily": "JetBrains Mono",
   "monospaceFontFamily": "JetBrains Mono",
   "textFontFamily": "JetBrains Mono",
-  "translucency": true
+  "translucency": true,
+  "nativeMenus": true
 }

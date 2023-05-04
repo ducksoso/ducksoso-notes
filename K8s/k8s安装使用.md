@@ -1,5 +1,3 @@
-
-
 ### 1、安装`kubectl`
 
 需要本地安装：`kubectl`，类似于`docker`，可以用来管理`k8s`中的服务
@@ -31,8 +29,7 @@
 
 指定集群配置`API`访问配置文件，并搜索相应的`pod`
 
-kubectl --kubeconfig ~/Downloads/local_bee get pods | grep enigma2-operation
-
+`kubectl --kubeconfig ~/Downloads/local_bee get pods | grep enigma2-operation`
 
 
 ##### 查看指定pod的日志

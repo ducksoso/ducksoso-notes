@@ -1,4 +1,10 @@
 {
   "promptDelete": false,
-  "showLineNumber": true
+  "showLineNumber": true,
+  "showInlineTitle": false,
+  "defaultViewMode": "source",
+  "showIndentGuide": true,
+  "rightToLeft": false,
+  "tabSize": 4,
+  "readableLineLength": true
 }
