@@ -1,4 +1,4 @@
-## Goland快捷键
+## Idea-快捷键
 
 切换最近项目：cmd + shift + p
 

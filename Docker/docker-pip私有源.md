@@ -1,58 +1,9 @@
-# 使用 devpi 搭建 PyPI Server
+## 使用 pypiserver 搭建 PyPI Server
 
+不推荐使用 devpi ，针对超过 1 G 的 .whl 文件就无法进行操作了
 
-> 使用pip命令安装Python包时，默认是去 https://pypi.python.org/simple/ 源查找相应的包，下载并安装。
-> 但是内网环境，或者需要发布一些私有包提供给指定用户时，就需要搭建自己的 PyPI Server
-
-
-## PyPI Server 比较
-
-| PyPI Server      | PyPI 代理镜像 | 本地缓存 | 单元测试 | 系统测试 | 搜索               |
-| ---------------- | ------------- | -------- | -------- | -------- | ------------------ |
-| devpi            | 支持          | 支持     | ★★★★     | ★★★★★    | 支持 Web + XML RPC |
-| DjangoPyPI       | 支持          | 不支持   | ★        | 无       | 支持 Web + XML RPC |
-| chishop          | 不支持        | 不支持   | 无       | 无       | 不支持             |
-| pypiserver       | 支持          | 不支持   | ★★★★★    | 无       | 不支持             |
-| Cheese Shop      | 不支持        | 不支持   | ★★       | 无       | 支持 Web + XML RPC |
-| localshop        | 支持          | 支持     | ★★★★     | 无       | 只支持 XML RPC     |
-| mypypi           | 不支持        | 不支持   | ★★       | 无       | 不支持             |
-| proxypypi        | 支持          | 支持     | 无       | 无       | 不支持             |
-| Flask-Pypi-Proxy | 支持          | 支持     | 无       | 无       | 不支持             |
-
-
-## devpi 特有的功能
-
-### 2.1 索引继承
-
-pypiserver 等只支持两个索引： 私有的索引和公有的索引。 在私有索引上找不到 Python 包时， 就会去公有索引上找。 devpi 对这一功能做了扩展， devpi 可以支持多个索引。同时，新索引可以继承之前的索引，这在维护多版本系统上十分有用。
-
-### 2.2 支持集群部署
-
-支持一台或多台服务器部署，来加速访问。还支持通过 json 接口，实时监控集群的状态。
-
-### 2.3 支持导入导出功能
-
-支持导出服务器状态，并在必要时重新导回服务器，恢复服务器状态。
-
-### 2.4 Jenkins 集成
-
-支持给索引设置 Jenkins 触发器，可以使用 tox 自动测试上传的包。
-
-
-
-## 搭建 devpi server
-
-devpi 包含三个组件：
-
-- devpi-server，是 devpi server 核心组件，提供镜像与缓存功能
-- devpi-web，提供 Web 界面与查询功能
-- devpi-client，命令行工具, 提供包上传等与服务器交互的功能
-
-
-
-
-
-
+* 目前大部分的pypi服务器都采用 pypiserver
+* pypiserver 社区更加活跃，GitHub star 更多
 
 
 
@@ -83,12 +34,6 @@ devpi upload --from-dir /wheelhouse
 
 上传完成后可以使用 http://<host_ip>:3141 查看 pip 本地源服务器状态。
 若要临时使用可以使用 pip install 的 --index 和 --trusted-host 选项
-
-
-
-
-
-
 
 ## 使用方式
 
@@ -191,8 +136,6 @@ index = http://<host_ip>:3141/root/public/
 
 
 
-
-
 ## 三、部署
 
 使用 k8s 的持久化存储方式：`StatefulSet` 形式，需要写对应的yaml文件
@@ -200,6 +143,76 @@ index = http://<host_ip>:3141/root/public/
 
 
 
+
+## devpi 无法上传超过1G的包
+
+切换到 pypiserver 可以安装超过1G的 whl 包
+
+下载的包都放在： `/data/packages`里
+
+使用的时候：`pip install --index-url http://172.17.0.2:8080/simple torch --trusted-host 172.17.0.2`
+
+
+
+![image-20230612165148283](./docker-pip私有源.assets/image-20230612165148283.png)
+
+
+
+
+
+### 测试
+
+下载最新的ubuntu镜像，在里面安装 python3.10 & pip
+
+```
+# 安装 python3
+apt-get install python3.10
+
+# 安装 pip
+apt-get update
+
+apt-get install python3.10-distutils
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
+python3 get-pip.py --user
+
+
+# 安装 curl
+apt-get install curl
+
+```
+
+
+
+```shell
+docker run -p 80:8080 pypiserver/pypiserver run -a . -P .
+
+docker cp torch-1.13.1+cu116-cp310-cp310-linux_x86_64.whl unruffled_sinoussi:/data/packages
+
+```
+
+
+
+
+
+
+
+以下是测试我们的k8s集群里的devpi-service-0
+
+![image-20230613135404173](./docker-pip私有源.assets/image-20230613135404173.png)
+
+
+
+./pip3 install --index-url http://basebit-pypiserver.poodle.curisinsight.com/simple torch --trusted-host basebit-pypiserver.poodle.curisinsight.com
+
+
+
+
+
+
+
+事实证明 devpi 不适合部署 pypi ，另外参考了其他的一些pypi源，大概率采用的都是pypiserver，其star也是最多的，说明社区比较活跃。
 
 
 
